@@ -1,0 +1,39 @@
+/* data.css */
+
+/* SVG container */
+.mainCont {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Revenue Circles */
+.revenue-circle {
+  transition: transform 0.3s;
+}
+
+.revenue-circle:hover {
+  transform: scale(1.2);
+}
+
+/* Cost Circles */
+.cost-circle {
+  transition: transform 0.3s;
+}
+
+.cost-circle:hover {
+  transform: scale(1.2); /* Scale up on hover */
+}
+
+/* Styling for the X and Y axes */
+.axis line,
+.axis path {
+  stroke: #333;
+  shape-rendering: crispEdges;
+}
+
+/* Additional axis label styling */
+.axis-label {
+  font-weight: bold;
+  font-size: 14px;
+}

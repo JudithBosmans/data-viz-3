@@ -1,0 +1,92 @@
+[
+  {
+    "year": "1964 Tokyo",
+    "country": "Tokyo",
+    "revenue": {
+      "sponsorship": 100000,
+      "ticket_sales": 500000,
+      "broadcasting": 2000000,
+      "merchandising": 100000
+    },
+    "cost": {
+      "venues": 3695925.0,
+      "organization": 2208240.0,
+      "other": 500000
+    }
+  },
+  {
+    "year": "1968 Mexico City",
+    "country": "Mexico City",
+    "revenue": {
+      "sponsorship": 1000000,
+      "ticket_sales": 400000,
+      "broadcasting": 2000000,
+      "merchandising": 300000
+    },
+    "cost": {
+      "venues": 36658.5,
+      "organization": 5549620.0,
+      "other": 50000000
+    }
+  },
+  {
+    "year": "1972 Munich",
+    "country": "Munich",
+    "revenue": {
+      "sponsorship": 10000,
+      "ticket_sales": 500000,
+      "broadcasting": 2000000,
+      "merchandising": 30000
+    },
+    "cost": {
+      "venues": 12027640.0,
+      "organization": 99291653.0,
+      "other": 500000
+    }
+  },
+  {
+    "year": "1976 Montreal",
+    "country": "Montreal",
+    "revenue": {
+      "sponsorship": 100000,
+      "ticket_sales": 500000,
+      "broadcasting": 20000,
+      "merchandising": 30000
+    },
+    "cost": {
+      "venues": 504795292.0,
+      "organization": 92633072.0,
+      "other": 500000
+    }
+  },
+  {
+    "year": "1980 Moscow",
+    "country": "Moscow",
+    "revenue": {
+      "sponsorship": 10000,
+      "ticket_sales": 500,
+      "broadcasting": 2000000,
+      "merchandising": 300000
+    },
+    "cost": {
+      "venues": 10550830420.0,
+      "organization": 6115883.36,
+      "other": 5000000
+    }
+  },
+  {
+    "year": "1980 Blbli",
+    "country": "Blbli",
+    "revenue": {
+      "sponsorship": 100000,
+      "ticket_sales": 500000,
+      "broadcasting": 2000000,
+      "merchandising": 300000
+    },
+    "cost": {
+      "venues": 2055083.0,
+      "organization": 716189083.36,
+      "other": 50000000
+    }
+  }
+]
