@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <HomeElements />
-      {/* <Data /> */}
+      <Data />
       {/* <Detail /> */}
     </div>
   );
