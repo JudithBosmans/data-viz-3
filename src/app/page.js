@@ -1,6 +1,5 @@
 "use client";
 import Data from "./routes/Data";
-import Detail from "./routes/Detail";
 import HomeElements from "./routes/HomeElements";
 
 export default function Home() {
@@ -8,7 +7,6 @@ export default function Home() {
     <div>
       <HomeElements />
       <Data />
-      {/* <Detail /> */}
     </div>
   );
 }
