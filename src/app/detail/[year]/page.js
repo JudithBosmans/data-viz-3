@@ -34,23 +34,26 @@ const Detail = ({ params }) => {
       <div className="px-[3%] py-[3%]">
         <Link href="/">
           <svg
-            className="w-6 h-6 text-white hover:text-gray-500"
+            class="w-6 h-6 text-white"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
-            fill="currentColor"
+            fill="none"
             viewBox="0 0 24 24"
           >
             <path
-              fillRule="evenodd"
-              d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z"
-              clipRule="evenodd"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 12h14M5 12l4-4m-4 4 4 4"
             />
           </svg>
         </Link>
       </div>
 
+      {/* 
       <div>
         <div className="flex flex-row  px-[5%] items-center align-middle">
           <h1 className="text-4xl font-bold py-[3%]">{data.year}</h1>
@@ -63,7 +66,7 @@ const Detail = ({ params }) => {
 
       <div className="flex flex-row">
         {/***** TEXT ALINEA ******/}
-        <div className="text-container flex-1 max-w-[35%] mt-[20%] px-[5%]">
+      {/*   <div className="text-container flex-1 max-w-[35%] mt-[20%] px-[5%]">
           <div className="flex flex-row items-center">
             <span className="text-3xl font-medium">
               <span className="text-3xl font-bold pr-3">{data.city},</span>
@@ -79,7 +82,7 @@ const Detail = ({ params }) => {
         </div>
 
         {/***** GRID ******/}
-        <div className="grid grid-cols-4 grid-rows-3 gap-4 flex-1 max-w-[60%] text-black">
+      {/* <div className="grid grid-cols-4 grid-rows-3 gap-4 flex-1 max-w-[60%] text-black">
           <div className="gridPanel col-start-1 row-start-1">
             <p>Venues: {data.cost.venues}</p>
             <p>organization: {data.cost.organization}</p>
@@ -114,6 +117,73 @@ const Detail = ({ params }) => {
             <p>Merchandising: {data.revenue.merchandising}</p>
             <p>Ticket Sales: {data.revenue.ticket_sales}</p>
             <p>Sponsorship: {data.revenue.sponsorship}</p>
+          </div>
+        </div>
+      </div> */}
+
+      <div className="grid grid-cols-4 grid-rows-9 gap-4 flex-1 w-[90vw] h-[80vh] text-black absolute left-[60%] top-[55%] transform -translate-x-1/2 -translate-y-1/2">
+        <div className="gridPanel col-start-1 col-end-2 row-start-2 row-end-4">
+          <div className="p-5"></div>
+        </div>
+        <div className="gridPanel col-start-2 col-end-4 row-start-1 row-end-5">
+          <div className="p-5">
+            <a className="border border-black p-2 rounded-md">SOURCE</a>
+          </div>
+          <div className="p-5">
+            <p>
+              TOTAL REVENUE: <br />
+            </p>
+            {data.revenue.totalRevenue}
+            <p>
+              TOTAL COST: <br />
+            </p>
+            {data.cost.totalCost}
+          </div>
+        </div>
+        <div className="gridPanel col-start-1 col-end-2 row-start-4 row-end-6">
+          <div className="p-5">
+            <a className="border border-black p-2 rounded-md">SOURCE</a>
+          </div>
+          <div className="p-5">
+            <p>
+              TOTAL EVENTS: <br />
+            </p>
+            {data.totalEvents}
+          </div>
+        </div>
+        <div className="gridPanel col-start-2 col-end-3 row-start-5 row-end-7">
+          <div className="p-5">
+            <a className="border border-black p-2 rounded-md">SOURCE</a>
+          </div>
+          <div className="p-5">
+            <p>
+              TOTAL ATHLETES: <br />
+            </p>
+            {data.totalAthelets}
+          </div>
+        </div>
+        <div className="gridPanel col-start-2 col-end-3 row-start-7 row-end-9">
+          <div className="p-5">
+            <a className="border border-black p-2 rounded-md">SOURCE</a>
+          </div>
+          <div className="p-5">
+            <p>
+              TOTAL COUNTRIES: <br />
+            </p>
+            {data.Number_countries}
+          </div>
+        </div>
+        <div className="gridPanel col-start-3 col-end-4 row-start-5 row-end-8">
+          <div className="p-5">
+            <div className="flex flex-row">
+              <img className="w-[5vw]" src={data.flag}></img>
+              <p>{data.year}</p>
+            </div>
+            <p>
+              {data.city}, {data.country}
+            </p>
+            <p className="pt-3 font-normal">{data.explanationIntro}</p>
+            <p className="pt-3 font-light">{data.explanationLong}</p>
           </div>
         </div>
       </div>

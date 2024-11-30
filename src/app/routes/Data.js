@@ -8,17 +8,20 @@ import "../../styles/data.css";
 const HexbinChart = () => {
   const [data, setData] = useState(null);
 
-  const width = 5000;
+  const width = 4000;
   const height = 1200;
   const margin = { top: 20, right: 30, bottom: 80, left: 0 };
-  const circlePadding = 15;
-  const columnOffset = 25;
-  const maxDots = 10;
-  const categoryGap = 0;
+  const lineThickness = 10; // Thickness for each category line
+  const spacing = 20; // Space between each category
+  const columnOffset = 30; // Space between revenue and cost columns
 
   useEffect(() => {
     d3.json("/data/dataOly.json")
-      .then((fetchedData) => setData(fetchedData))
+      .then((fetchedData) => {
+        // Filter out entries with empty 'year' fields
+        const filteredData = fetchedData.filter((d) => d.year !== "");
+        setData(filteredData);
+      })
       .catch((error) => console.error("Error loading data:", error));
   }, []);
 
@@ -30,146 +33,132 @@ const HexbinChart = () => {
     .range([margin.left, width - margin.right])
     .padding(0.2);
 
-  const revenueColor = d3.scaleOrdinal(d3.schemeBlues[4]);
-  const costColor = d3.scaleOrdinal(d3.schemeReds[3]);
-  if (!data) return <p>No data available for this year.</p>;
+  const yScale = d3
+    .scaleLinear()
+    .domain([
+      0,
+      d3.max(data, (d) =>
+        Math.max(
+          d3.sum(Object.values(d.revenue)),
+          d3.sum(Object.values(d.cost))
+        )
+      ),
+    ])
+    .range([height - margin.bottom, margin.top]);
+
+  const revenueCategories = [
+    "ticket_sales",
+    "broadcasting",
+    "domesticSponsorship",
+    "internationalSponsorship",
+    "totalRevenue",
+  ];
+
+  const costCategories = ["venues", "organization", "other", "totalCost"];
+
+  const revenueColor = d3
+    .scaleOrdinal()
+    .domain(revenueCategories)
+    .range(d3.schemeBlues[revenueCategories.length]);
+
+  const costColor = d3
+    .scaleOrdinal()
+    .domain(costCategories)
+    .range(d3.schemeReds[costCategories.length]);
 
   return (
     <div className="flex flex-col items-center">
       <h1 className="text-3xl font-semibold mb-4">Data Visualization</h1>
       <div className="overflow-x-auto w-full max-w-5xl">
         <svg width={width} height={height} className="mainCont mx-auto">
+          {/* X-axis */}
           <g transform={`translate(0, ${height - margin.bottom})`}>
             {data.map((d) => (
               <text
                 key={d.year}
                 x={xScale(d.year) + xScale.bandwidth() / 2}
-                y={15}
+                y={20}
                 textAnchor="end"
                 transform={`rotate(-45, ${
                   xScale(d.year) + xScale.bandwidth() / 2
                 }, 15)`}
-                className="text-xs font-medium text-white"
+                className="text-xs font-medium text-white rounded-full"
               >
                 {d.year}
               </text>
             ))}
           </g>
 
-          {data.map((d) => {
+          {/* Revenue and Cost Bars */}
+          {data.map((d, dataIndex) => {
             const xPos = xScale(d.year) + xScale.bandwidth() / 2;
 
-            let currentCostY = height - margin.bottom - 20;
-            let currentRevenueY = height - margin.bottom - 20;
+            let currentRevenueY = yScale(0); // Start stacking revenue from the bottom
+            let currentCostY = yScale(0); // Start stacking cost from the bottom
+
+            const revenueLines = revenueCategories.map((key, i) => {
+              const value = d.revenue[key];
+              if (!value) return null; // Skip if value is undefined or zero
+
+              const lineHeight = yScale(0) - yScale(value);
+              const yEnd = currentRevenueY - lineHeight;
+              const yStart = currentRevenueY;
+              currentRevenueY = yEnd - spacing;
+
+              return (
+                <Link
+                  key={`${d.year}-revenue-${key}`}
+                  href={`/detail/${d.year}`}
+                >
+                  <motion.line
+                    x1={xPos + columnOffset}
+                    y1={yStart}
+                    x2={xPos + columnOffset}
+                    y2={yEnd}
+                    stroke={revenueColor(key)}
+                    strokeWidth={lineThickness}
+                    strokeLinecap="round"
+                    initial={{ scaleY: 0 }}
+                    animate={{ scaleY: 1 }}
+                    transition={{ duration: 1 }}
+                    className="cursor-pointer"
+                  />
+                </Link>
+              );
+            });
+
+            const costLines = costCategories.map((key, i) => {
+              const value = d.cost[key];
+              if (!value) return null; // Skip if value is undefined or zero
+
+              const lineHeight = yScale(0) - yScale(value);
+              const yEnd = currentCostY - lineHeight;
+              const yStart = currentCostY;
+              currentCostY = yEnd - spacing;
+
+              return (
+                <Link key={`${d.year}-cost-${key}`} href={`/detail/${d.year}`}>
+                  <motion.line
+                    x1={xPos - columnOffset}
+                    y1={yStart}
+                    x2={xPos - columnOffset}
+                    y2={yEnd}
+                    stroke={costColor(key)}
+                    strokeWidth={lineThickness}
+                    strokeLinecap="round"
+                    initial={{ scaleY: 0 }}
+                    animate={{ scaleY: 1 }}
+                    transition={{ duration: 1 }}
+                    className="cursor-pointer"
+                  />
+                </Link>
+              );
+            });
 
             return (
-              <g key={d.year}>
-                {/* Cost Path */}
-                {Object.entries(d.cost).map(([key, value]) => {
-                  const numDots = Math.min(maxDots, Math.ceil(value / 500000));
-                  const points = Array.from({ length: numDots }).map((_, k) => {
-                    const y = currentCostY - k * (15 + circlePadding);
-                    return [xPos - columnOffset, y];
-                  });
-
-                  currentCostY -= numDots * (15 + circlePadding) + categoryGap;
-
-                  const pathData = d3.line()(points);
-
-                  return (
-                    <g key={`${d.year}-cost-${key}`}>
-                      <Link href={`/detail/${d.year}`}>
-                        <motion.path
-                          d={pathData}
-                          stroke={costColor(key)}
-                          strokeWidth={2}
-                          fill="none"
-                          initial={{
-                            strokeDasharray: "1000",
-                            strokeDashoffset: "1000",
-                          }}
-                          animate={{ strokeDashoffset: 0 }}
-                          transition={{ duration: 1 }}
-                          className="cursor-pointer"
-                        />
-                      </Link>
-                      {points.map(([x, y], i) => (
-                        <Link
-                          key={`${d.year}-cost-circle-${key}-${i}`}
-                          href={`/detail/${d.year}`}
-                        >
-                          <motion.circle
-                            cx={x}
-                            cy={y}
-                            r={8}
-                            fill={costColor(key)}
-                            initial={{ opacity: 0, scale: 0 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{
-                              duration: 0.6,
-                              delay: 1 + i * 0.1,
-                            }}
-                            className="cursor-pointer"
-                          />
-                        </Link>
-                      ))}
-                    </g>
-                  );
-                })}
-
-                {/* Revenue Path */}
-                {Object.entries(d.revenue).map(([key, value]) => {
-                  const numDots = Math.min(maxDots, Math.ceil(value / 500000));
-                  const points = Array.from({ length: numDots }).map((_, k) => {
-                    const y = currentRevenueY - k * (15 + circlePadding);
-                    return [xPos + columnOffset, y];
-                  });
-
-                  currentRevenueY -=
-                    numDots * (15 + circlePadding) + categoryGap;
-
-                  const pathData = d3.line()(points);
-
-                  return (
-                    <g key={`${d.year}-revenue-${key}`}>
-                      <Link href={`/detail/${d.year}`}>
-                        <motion.path
-                          d={pathData}
-                          stroke={revenueColor(key)}
-                          strokeWidth={2}
-                          fill="none"
-                          initial={{
-                            strokeDasharray: "1000",
-                            strokeDashoffset: "1000",
-                          }}
-                          animate={{ strokeDashoffset: 0 }}
-                          transition={{ duration: 1 }}
-                          className="cursor-pointer"
-                        />
-                      </Link>
-                      {points.map(([x, y], i) => (
-                        <Link
-                          key={`${d.year}-revenue-circle-${key}-${i}`}
-                          href={`/detail/${d.year}`}
-                        >
-                          <motion.circle
-                            cx={x}
-                            cy={y}
-                            r={8}
-                            fill={revenueColor(key)}
-                            initial={{ opacity: 0, scale: 0 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{
-                              duration: 0.6,
-                              delay: 1 + i * 0.1,
-                            }}
-                            className="cursor-pointer"
-                          />
-                        </Link>
-                      ))}
-                    </g>
-                  );
-                })}
+              <g key={`${d.year}-${dataIndex}`}>
+                {revenueLines}
+                {costLines}
               </g>
             );
           })}
