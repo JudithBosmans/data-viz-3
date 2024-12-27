@@ -1,12 +1,18 @@
 "use client";
-import Data from "./routes/Data";
-import HomeElements from "./routes/HomeElements";
+import Data from "./components/Data";
+import HomeElements from "./components/HomeElements";
+import Map from "./components/Map";
+import Map2 from "./components/Map2";
+
+import Detail from "./components/Detail";
 
 export default function Home() {
   return (
     <div>
-      <HomeElements />
-      <Data />
+      {/* <Map2 /> */}
+      <Map />
+      {/* <Data />
+      <HomeElements /> */}
     </div>
   );
 }

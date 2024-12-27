@@ -1,0 +1,43 @@
+.map-container {
+  position: relative;
+  text-align: center;
+  margin: 20px auto;
+}
+
+svg {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.controls {
+  margin-bottom: 10px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.active {
+  background-color: #ddd;
+}
+
+.detail-view {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: left;
+}
+
+.detail-view img {
+  display: block;
+  margin-top: 10px;
+}

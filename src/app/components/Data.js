@@ -11,14 +11,13 @@ const HexbinChart = () => {
   const width = 4000;
   const height = 1200;
   const margin = { top: 20, right: 30, bottom: 80, left: 0 };
-  const lineThickness = 10; // Thickness for each category line
-  const spacing = 20; // Space between each category
-  const columnOffset = 30; // Space between revenue and cost columns
+  const lineThickness = 10; 
+  const spacing = 20; 
+  const columnOffset = 30; 
 
   useEffect(() => {
     d3.json("/data/dataOly.json")
       .then((fetchedData) => {
-        // Filter out entries with empty 'year' fields
         const filteredData = fetchedData.filter((d) => d.year !== "");
         setData(filteredData);
       })

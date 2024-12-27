@@ -34,32 +34,6 @@
       "SRC8": "The Tokyo Metropolitan Government. (1965). Official Report | Tokyo Olympic Games 1964. p. 331",
       "SRC9": "The Tokyo Metropolitan Government. (1965). Official Report | Tokyo Olympic Games 1964. p. 62",
       "SRC10": ""
-    },
-    "winter games": {
-      "year": "",
-      "country": "",
-      "city": "",
-      "flag": "",
-      "explanationIntro": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper",
-      "explanationLong": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-      "totalAthelets": 0,
-      "Number_countries": 0,
-      "Accredited_Media": 0,
-      "totalEvents": 0,
-      "revenue": {
-        "ticket_sales": 0,
-        "broadcasting": 0,
-        "domesticSponsorship": 0,
-        "internationalSponsorship": 0,
-        "totalRevenue": 0
-      },
-      "cost": {
-        "venues": 0,
-        "organization": 0,
-        "other": 0,
-        "totalCost": 0
-      },
-      "sources": {}
     }
   },
   {
