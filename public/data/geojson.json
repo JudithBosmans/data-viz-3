@@ -1138,6 +1138,43 @@
     {
       "type": "Feature",
       "properties": { "name": "Australia" },
+      "countryInfo": {
+        "year": "2000",
+        "country": "Australia",
+        "city": "Sydney",
+        "flag": "https://i.postimg.cc/YS8zsV5x/australia.png",
+        "explanationIntro": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper",
+        "explanationLong": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+        "totalAthelets": 10651,
+        "Number_countries": 199,
+        "Accredited_Media": 5900,
+        "totalEvents": 300,
+        "revenue": {
+          "ticket_sales": 803478580.74,
+          "broadcasting": 1942347494.65,
+          "domesticSponsorship": 717443669.1999999,
+          "internationalSponsorship": 562309599.6999999,
+          "totalRevenue": 4025579344.2899998
+        },
+        "cost": {
+          "venues": 1661946805.2800002,
+          "organization": 1703960414.75,
+          "other": 0,
+          "totalCost": 3365907220.03
+        },
+        "sources": {
+          "SRC1": "IOC 2017: https://www.olympic.org/sydney-2000 (accessed 23.08.17)",
+          "SRC2": "IOC 2017: https://www.olympic.org/sydney-2000 (accessed 23.08.17)",
+          "SRC3": "IOC 2017: https://www.olympic.org/sydney-2000 (accessed 23.08.17)",
+          "SRC4": "Sydney 2000. (2000). Sydney 2000 Broadcast Report (pp. 1–22). https://stillmed.olympic.org/media/Document%20Library/OlympicOrg/Games/Summer-Games/Games-Sydney-2000-Olympic-Games/IOC-Marketing-and-Broadcasting-Various-files/IOC-Marketing-Report-Chap-1-Sydney-2000.pdf, 10",
+          "SRC5": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 33",
+          "SRC6": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 27",
+          "SRC7": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 15 and 19",
+          "SRC8": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 15 and 19",
+          "SRC9": "Sydney Organising Committee for the Olympic Games SOCOG (Ed.). (2001). Official Report of the XXVII Olympiad Volume One: Preparing for the Games (First Edition). Paragon Pringer Australasia, p. 370-393",
+          "SRC10": "Sydney Organising Committee for the Olympic Games SOCOG (Ed.). (2001). Official Report of the XXVII Olympiad Volume One: Preparing for the Games (First Edition). Paragon Pringer Australasia, p. 274"
+        }
+      },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -1973,6 +2010,43 @@
     {
       "type": "Feature",
       "properties": { "name": "Brazil" },
+      "countryInfo": {
+        "year": "2016",
+        "country": "Brazil",
+        "city": "Rio de Janeiro",
+        "flag": "https://i.postimg.cc/sgSJzmLt/brasil.png",
+        "explanationIntro": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper",
+        "explanationLong": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+        "totalAthelets": 11238,
+        "Number_countries": 207,
+        "Accredited_Media": 25000,
+        "totalEvents": 306,
+        "revenue": {
+          "ticket_sales": 335844504,
+          "broadcasting": 3000629398.46,
+          "domesticSponsorship": 887215386.99,
+          "internationalSponsorship": 698889273.68,
+          "totalRevenue": 4922578563.13
+        },
+        "cost": {
+          "venues": 2302301924,
+          "organization": 2865936005,
+          "other": 0,
+          "totalCost": 4604603848
+        },
+        "sources": {
+          "SRC1": "IOC 2018: https://www.olympic.org/rio-2016 (accessed 1/6/2018)",
+          "SRC2": "IOC 2018: https://www.olympic.org/rio-2016 (accessed 1/6/2018)",
+          "SRC3": "IOC 2018: https://www.olympic.org/rio-2016 (accessed 1/6/2018)",
+          "SRC4": "Holmes, T. (2016). Suspended reality: The ins and outs of Rio’s Olympic bubble. The Conversation. http://theconversation.com/suspended-reality-the-ins-and-outs-of-rios-olympic-bubble-62692",
+          "SRC5": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 33",
+          "SRC6": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 27",
+          "SRC7": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 15 and 19",
+          "SRC8": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 19",
+          "SRC9": "Brito, Renata, and Stephen Wade. 2017. ‘AP Analysis: Rio de Janeiro Olympics Cost $13.1 Billion’. AP NEWS. Retrieved 3 December 2021 (https://apnews.com/article/d1662ddb3bae4d2984ca4ab65012be78).",
+          "SRC10": "Brito, Renata, and Stephen Wade. 2017. ‘AP Analysis: Rio de Janeiro Olympics Cost $13.1 Billion’. AP NEWS. Retrieved 3 December 2021 (https://apnews.com/article/d1662ddb3bae4d2984ca4ab65012be78)."
+        }
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -2359,6 +2433,42 @@
     {
       "type": "Feature",
       "properties": { "name": "Canada" },
+      "countryInfo": {
+        "year": "1976",
+        "country": "Canada",
+        "city": "Montreal",
+        "flag": "https://i.postimg.cc/W413HG8N/canada.png",
+        "explanationIntro": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper",
+        "explanationLong": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+        "totalAthelets": 6084,
+        "Number_countries": 92,
+        "Accredited_Media": 8733,
+        "totalEvents": 198,
+        "revenue": {
+          "ticket_sales": 120828662,
+          "broadcasting": 154436930,
+          "domesticSponsorship": 0,
+          "internationalSponsorship": 30887386,
+          "totalRevenue": 306152978
+        },
+        "cost": {
+          "venues": 5047952972,
+          "organization": 926353072,
+          "other": 0,
+          "totalCost": 5974306044
+        },
+        "sources": {
+          "SRC1": "IOC: https://www.olympic.org/montreal-1976 (accessed 18.05.2015)",
+          "SRC2": "IOC: https://www.olympic.org/montreal-1976 (accessed 18.05.2015)",
+          "SRC3": "IOC: https://www.olympic.org/montreal-1976 (accessed 18.05.2015)",
+          "SRC4": "Chattigny, L. (Ed.). (1978). Montréal 1976. Games of the XXI Olympiad Montréal 1967. Official Report. Volume I Organization. (Vol. 1), p. 383-385",
+          "SRC5": "Chattigny, L. (Ed.). (1978). Montréal 1976. Games of the XXI Olympiad Montréal 1967. Official Report. Volume I Organization. (Vol. 1), p. 58-59",
+          "SRC6": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 27",
+          "SRC7": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 20",
+          "SRC8": "Chattigny, L. (Ed.). (1978). Montréal 1976. Games of the XXI Olympiad Montréal 1967. Official Report. Volume I Organization. (Vol. 1), p. 58 and p. 90",
+          "SRC9": "Chattigny, L. (Ed.). (1978). Montréal 1976. Games of the XXI Olympiad Montréal 1967. Official Report. Volume I Organization. (Vol. 1), p. 58"
+        }
+      },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -3452,6 +3562,43 @@
     {
       "type": "Feature",
       "properties": { "name": "China" },
+      "countryInfo": {
+        "year": "2008",
+        "country": "China",
+        "city": "Beijing",
+        "flag": "https://i.postimg.cc/SKYR31tM/china.png",
+        "explanationIntro": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper",
+        "explanationLong": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+        "totalAthelets": 10500,
+        "Number_countries": 204,
+        "Accredited_Media": 24704,
+        "totalEvents": 302,
+        "revenue": {
+          "ticket_sales": 215765569.14,
+          "broadcasting": 2028196349.9,
+          "domesticSponsorship": 1420553855.19,
+          "internationalSponsorship": 672670738.35,
+          "totalRevenue": 4337186512.58
+        },
+        "cost": {
+          "venues": 2050356057,
+          "organization": 3246474043.5800004,
+          "other": 0,
+          "totalCost": 5296830100.58
+        },
+        "sources": {
+          "SRC1": "International Olympic Committee (IOC). (2010). Final report of the IOC coordination commission: Games of the XXIX Olympics. https://stillmed.olympic.org/media/Document%20Library/OlympicOrg/Games/Summer-Games/Games-Beijing-2008-Olympic-Games/Final-Report-of-the-IOC-Coordination-Commission/Final-Report-of-the-IOC-Coordination-Commission-Beijing-2008.pdf, p. 42",
+          "SRC2": "Beijing Organizing Committee for the Games of the XXIX Olympiad (BOCOG). (2010b). Ceremonies and competitions: Celebration of the Games official report of the Beijing 2008 Olympic Games (Vol. 2). BOCOG. https://digital.la84.org/digital/collection/p17103coll8/id/44636/rec/89, p. 125",
+          "SRC3": "Beijing Organizing Committee for the Games of the XXIX Olympiad (BOCOG). (2010b). Ceremonies and competitions: Celebration of the Games official report of the Beijing 2008 Olympic Games (Vol. 2). BOCOG. https://digital.la84.org/digital/collection/p17103coll8/id/44636/rec/89, p. 109",
+          "SRC4": "Beijing Organizing Committee for the Games of the XXIX Olympiad (BOCOG). (2010). Preparation for the games: New Beijing Great Olympics. Official report of the Beijing 2008 Olympic Games (Vol. 3). BOCOG. https://stillmed.olympic.org/Documents/Reports/Official%20Past%20Games%20Reports/Summer/ENG/2008-RO-S-Beijing-vol3.pdf, p. 131-132",
+          "SRC5": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 33",
+          "SRC6": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 27",
+          "SRC7": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 15 and 19",
+          "SRC8": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 15 and 19",
+          "SRC9": "Matheson, V. (2012). Assessing the infrastructure impact of mega-events in emerging economies. Economics Department Working Papers. https://crossworks.holycross.edu/econ_working_papers/8, p. 34",
+          "SRC10": "Beijing Organizing Committee for the Games of the XXIX Olympiad (BOCOG). (2010). Preparation for the games: New Beijing Great Olympics. Official report of the Beijing 2008 Olympic Games (Vol. 3). BOCOG. https://stillmed.olympic.org/Documents/Reports/Official%20Past%20Games%20Reports/Summer/ENG/2008-RO-S-Beijing-vol3.pdf, p. 297"
+        }
+      },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -4352,6 +4499,42 @@
     {
       "type": "Feature",
       "properties": { "name": "Germany" },
+      "countryInfo": {
+        "year": "1972",
+        "country": "Germany",
+        "city": "Munich",
+        "flag": "https://i.postimg.cc/L6jnY6hp/germany.png",
+        "explanationIntro": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper",
+        "explanationLong": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+        "totalAthelets": 7134,
+        "Number_countries": 121,
+        "Accredited_Media": 4500,
+        "totalEvents": 195,
+        "revenue": {
+          "ticket_sales": 100592619,
+          "broadcasting": 108089169.32,
+          "domesticSponsorship": 11298125.78,
+          "internationalSponsorship": 0,
+          "totalRevenue": 1422759554.1
+        },
+        "cost": {
+          "venues": 1202779640,
+          "organization": 992916953,
+          "other": 0,
+          "totalCost": 2195696593
+        },
+        "sources": {
+          "SRC1": "IOC. (2018). 1972 Olympics—Munich Summer Games results & highlights. https://www.olympic.org/munich-1972",
+          "SRC2": "Flyvbjerg, B., Stewart, A., & Budzier, A. (2016). The Oxford Olympics Study 2016: Cost and Cost Overrun at the Games. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2804554, p. 9",
+          "SRC3": "IOC. (2018). 1972 Olympics—Munich Summer Games results & highlights. https://www.olympic.org/munich-1972",
+          "SRC4": "Deutscher Bundestag. (1975). Unterrichtung durch die Bundesregierung betr. Gesamtfinanzierung der Olympischen Sommerspiele 1972, p. 29",
+          "SRC5": "Organizing Committee Olympics Münich 1972. (1974). Die Spiele—The official report of the Organizing Committee for the Games of the XXth Olympiad Munich 1972, The organization (Pro Sport München, Vol. 1), p. 310",
+          "SRC6": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 27",
+          "SRC7": "Organizing Committee Olympics Münich 1972. (1974). Die Spiele—The official report of the Organizing Committee for the Games of the XXth Olympiad Munich 1972, The organization (Pro Sport München, Vol. 1), p. 251",
+          "SRC8": "Organizing Committee Olympics Münich 1972. (1974). Die Spiele—The official report of the Organizing Committee for the Games of the XXth Olympiad Munich 1972, The organization (Pro Sport München, Vol. 1), p. 29",
+          "SRC9": "Organizing Committee Olympics Münich 1972. (1974). Die Spiele—The official report of the Organizing Committee for the Games of the XXth Olympiad Munich 1972, The organization (Pro Sport München, Vol. 1), p. 29 and 53"
+        }
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -4742,6 +4925,42 @@
     {
       "type": "Feature",
       "properties": { "name": "Spain" },
+      "countryInfo": {
+        "year": "1992",
+        "country": "Spain",
+        "city": "Barcelona",
+        "flag": "https://i.postimg.cc/CL7J93CQ/spain.webp",
+        "explanationIntro": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper",
+        "explanationLong": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+        "totalAthelets": 9959,
+        "Number_countries": 172,
+        "Accredited_Media": 12831,
+        "totalEvents": 257,
+        "revenue": {
+          "ticket_sales": 141375980.98,
+          "broadcasting": 1138166125.3500001,
+          "domesticSponsorship": 0,
+          "internationalSponsorship": 204998751.56,
+          "totalRevenue": 1484540857.89
+        },
+        "cost": {
+          "venues": 1529678996,
+          "organization": 998663592.4499999,
+          "other": 0,
+          "totalCost": 2528342588.4499999
+        },
+        "sources": {
+          "SRC1": "COOB’92 Comitè Organitzador de les Olimpíades de Barcelona 1992. (1992). Official report of the Games of the XXV Olympiad Barcelona 1992, vol. 4. COOB’92. p.87",
+          "SRC2": "COOB’92 Comitè Organitzador de les Olimpíades de Barcelona 1992. (1992). Official report of the Games of the XXV Olympiad Barcelona 1992, vol. 3. COOB’92. p.24",
+          "SRC3": "COOB’92 Comitè Organitzador de les Olimpíades de Barcelona 1992. (1992). Official report of the Games of the XXV Olympiad Barcelona 1992, vol. 3. COOB’92. p.87",
+          "SRC4": "COOB’92 Comitè Organitzador de les Olimpíades de Barcelona 1992. (1992). Official report of the Games of the XXV Olympiad Barcelona 1992, vol. 3. COOB’92. p.55",
+          "SRC5": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 33",
+          "SRC6": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 27",
+          "SRC7": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 15",
+          "SRC8": "Brunet, F. (2002). Anàlisi de l’impact economic dels Jocs Olímpics de Barcelona 1986-2004. In M. de Moragas & M. Botella (Eds.), Barcelona: L’herència dels Jocs (1992-2002) (pp. 245–274). Centre d’Estudis Olímpics - UAB, Editorial Planeta. P. 212",
+          "SRC9": "COOB’92 Comitè Organitzador de les Olimpíades de Barcelona 1992. (1992). Official report of the Games of the XXV Olympiad Barcelona 1992, vol. 1.III COOB’92. p.283 and vol2.part XXX, p. 59"
+        }
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -5160,6 +5379,43 @@
     {
       "type": "Feature",
       "properties": { "name": "England" },
+      "countryInfo": {
+        "year": "2012",
+        "country": "England",
+        "city": "London",
+        "flag": "https://i.postimg.cc/d0vhgjrQ/uk.webp",
+        "explanationIntro": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper",
+        "explanationLong": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+        "totalAthelets": 10568,
+        "Number_countries": 204,
+        "Accredited_Media": 21000,
+        "totalEvents": 302,
+        "revenue": {
+          "ticket_sales": 1080567526,
+          "broadcasting": 2809694307.26,
+          "domesticSponsorship": 1257745602.7,
+          "internationalSponsorship": 691978819.85,
+          "totalRevenue": 5839986255.81
+        },
+        "cost": {
+          "venues": 7750871314.97,
+          "organization": 3277479951.8300004,
+          "other": 0,
+          "totalCost": 11028351266.8
+        },
+        "sources": {
+          "SRC1": "IOC 2017: https://www.olympic.org/london-2012 (accessed 2014.12.2017)",
+          "SRC2": "IOC. (2020). Summer Olympic Games—London 2008—\"All Facts\". https://www.olympic.org/london-2012",
+          "SRC3": "IOC 2017: https://www.olympic.org/london-2012 (accessed 2014.12.2017)",
+          "SRC4": "IOC. (2020). Summer Olympic Games—London 2012—\"All Facts\". https://www.olympic.org/london-2012",
+          "SRC5": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 33",
+          "SRC6": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 27",
+          "SRC7": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 15 and 19",
+          "SRC8": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 15 and 19",
+          "SRC9": "Jennings, W. (2012). Why costs overrun: Risk, optimism and uncertainty in budgeting for the London 2012 Olympic Games. Construction Management and Economics, 30(6), 455–462.",
+          "SRC10": "The London Organising Committee of the Olympic Games (LOCOG). (2013). London 2012. Reports and Accounts. The London Organising Committee of the Olympic Games and Paralympic Games Limited, p. 43"
+        }
+      },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -5467,6 +5723,43 @@
     {
       "type": "Feature",
       "properties": { "name": "Greece" },
+      "countryInfo": {
+        "year": "2004",
+        "country": "Greece",
+        "city": "Athens",
+        "flag": "https://i.postimg.cc/YS8zsV5x/australia.png",
+        "explanationIntro": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper",
+        "explanationLong": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+        "totalAthelets": 10625,
+        "Number_countries": 201,
+        "Accredited_Media": 15000,
+        "totalEvents": 301,
+        "revenue": {
+          "ticket_sales": 303107709.36,
+          "broadcasting": 1986153148.16,
+          "domesticSponsorship": 401484772.91999996,
+          "internationalSponsorship": 587015938.28,
+          "totalRevenue": 3277761568.72
+        },
+        "cost": {
+          "venues": 4960521559.27,
+          "organization": 2589614782.8900003,
+          "other": 0,
+          "totalCost": 7550136342.16
+        },
+        "sources": {
+          "SRC1": "IOC, 2018: https://www.olympic.org/athens-2004 (accessed 1/6/2018)",
+          "SRC2": "IOC, 2018: https://www.olympic.org/athens-2004 (accessed 1/6/2018)",
+          "SRC3": "IOC, 2018: https://www.olympic.org/athens-2004 (accessed 1/6/2018)",
+          "SRC4": "Garcia, B., & Miah, A. (2006). Non-accredited media, Olympic Games and the host city. Communication Forum 2006: Global Olympiad, Chinese Media. https://www.researchgate.net/publication/43328947_Non-accredited_media_Olympic_Games_and_the_host_city, p.7",
+          "SRC5": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 33",
+          "SRC6": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 27",
+          "SRC7": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 15-21",
+          "SRC8": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 15-21",
+          "SRC9": "Kasimati, E. (2015). Post-Olympic use of the Olympic venues: The case of Greece. Athens journal of sports, 2(3), 167–184, p. 168",
+          "SRC10": "ATHOC. (2004). Official Report of the XXVIII Olympiad, Vol 1.II: Athens 2004. p. 131"
+        }
+      },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -7198,6 +7491,42 @@
     {
       "type": "Feature",
       "properties": { "name": "South Korea" },
+      "countryInfo": {
+        "year": "1988",
+        "country": "South-Korea",
+        "city": "Seoul",
+        "flag": "https://i.postimg.cc/SKCfs5Dr/korea.png",
+        "explanationIntro": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper",
+        "explanationLong": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+        "totalAthelets": 8397,
+        "Number_countries": 159,
+        "Accredited_Media": 11331,
+        "totalEvents": 237,
+        "revenue": {
+          "ticket_sales": 76441502.41,
+          "broadcasting": 855720151.9399999,
+          "domesticSponsorship": 0,
+          "internationalSponsorship": 135760108.26999998,
+          "totalRevenue": 212201610.68
+        },
+        "cost": {
+          "venues": 2246856371,
+          "organization": 1649990878,
+          "other": 0,
+          "totalCost": 3896847249
+        },
+        "sources": {
+          "SRC1": "IOC 2019: https://www.olympic.org/seoul-1988 (acessed 30.01.2019)",
+          "SRC2": "IOC 2019: https://www.olympic.org/seoul-1988 (acessed 30.01.2019)",
+          "SRC3": "IOC 2019: https://www.olympic.org/seoul-1988 (acessed 30.01.2019)",
+          "SRC4": "IOC 2019: https://www.olympic.org/seoul-1988 (acessed 30.01.2019)",
+          "SRC5": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 33",
+          "SRC6": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 27",
+          "SRC7": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 15 and 21",
+          "SRC8": "SLOOC. (1989). Official Report, Organization and Planning, Volume 1.II, p. 156",
+          "SRC9": "SLOOC. (1989). Official Report, Organization and Planning, Volume 1.III, p. 221"
+        }
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -7768,6 +8097,42 @@
     {
       "type": "Feature",
       "properties": { "name": "Mexico" },
+      "countryInfo": {
+        "year": "1968",
+        "country": "Mexico",
+        "city": "Mexico City",
+        "flag": "https://i.postimg.cc/L65x2wsL/Flag-of-Mexico-svg.webp",
+        "explanationIntro": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper",
+        "explanationLong": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+        "totalAthelets": 6059,
+        "Number_countries": 113,
+        "Accredited_Media": 4377,
+        "totalEvents": 172,
+        "revenue": {
+          "ticket_sales": 69267458,
+          "broadcasting": 70745900.2,
+          "domesticSponsorship": 0,
+          "internationalSponsorship": 1935092,
+          "totalRevenue": 141948450.2
+        },
+        "cost": {
+          "venues": 366903358.5,
+          "organization": 554996720,
+          "other": 0,
+          "totalCost": 921900078.5
+        },
+        "sources": {
+          "SRC1": "OCOG of the XIX Olympiad, 1969 Vol.2, p.165",
+          "SRC2": "OCOG of the XIX Olympiad, 1969 Vol.2, p.123",
+          "SRC3": "OCOG of the XIX Olympiad, 1969 Vol.3, p.8",
+          "SRC4": "OCOG of the XIX Olympiad, 1969 Vol.2, p.303",
+          "SRC5": "No original source, value is imputed",
+          "SRC6": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://stillmedab.olympic.org/media/Document%20Library/OlympicOrg/Documents/IOC-Marketing-and-Broadcasting-General-Files/Olympic-Marketing-Fact-File.pdf#_ga=2.241424773.649950629.1612188945-1369859038.1612188945, p. 27",
+          "SRC7": "No original source, value is imputed",
+          "SRC8": "OCOG of the XIX Olympiad, 1969 Vol.2, p.23-24",
+          "SRC9": "OCOG of the XIX Olympiad, 1969 Vol.2 (pt1), p. 23-24"
+        }
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -9920,6 +10285,41 @@
     {
       "type": "Feature",
       "properties": { "name": "Russia" },
+      "countryInfo": {
+        "year": "1980",
+        "country": "Russia",
+        "city": "Moscow",
+        "flag": "https://i.postimg.cc/43gv7SX8/russia.webp",
+        "explanationIntro": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper",
+        "explanationLong": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+        "totalAthelets": 5748,
+        "Number_countries": 81,
+        "Accredited_Media": 5615,
+        "totalEvents": 203,
+        "revenue": {
+          "ticket_sales": 96250122,
+          "broadcasting": 268147121.07999998,
+          "domesticSponsorship": 0,
+          "internationalSponsorship": 37165888.559999995,
+          "totalRevenue": 401563131.64
+        },
+        "cost": {
+          "venues": 2055083042,
+          "organization": 716158083.36,
+          "other": 0,
+          "totalCost": 2771241125.36
+        },
+        "sources": {
+          "SRC1": "Organizing Committee Olympic Games Moscow. (1981). Official Report of the Organizing Committee of the Games of the XXII Olympiad, Vol 3, Moscow, 1980, p. 7",
+          "SRC2": "Organizing Committee Olympic Games Moscow. (1981). Official Report of the Organizing Committee of the Games of the XXII Olympiad, Vol 3, Moscow, 1980, p. 6",
+          "SRC3": "Organizing Committee Olympic Games Moscow. (1981). Official Report of the Organizing Committee of the Games of the XXII Olympiad, Vol 3, Moscow, 1980, p. 6",
+          "SRC4": "Organizing Committee Olympic Games Moscow. (1981). Official Report of the Organizing Committee of the Games of the XXII Olympiad, Vol 2, Moscow, 1980, p. 482",
+          "SRC5": "Organizing Committee Olympic Games Moscow. (1981). Official Report of the Organizing Committee of the Games of the XXII Olympiad, Vol 2, Moscow, 1980, p. 525 and 529",
+          "SRC6": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 27",
+          "SRC7": "Organizing Committee Olympic Games Moscow. (1981). Official Report of the Organizing Committee of the Games of the XXII Olympiad, Vol 2, Moscow, 1980, p. 506 and 525",
+          "SRC8": "Organizing Committee Olympic Games Moscow. (1981). Official Report of the Organizing Committee of the Games of the XXII Olympiad, Vol 2, Moscow, 1980, p. 524"
+        }
+      },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -12188,6 +12588,42 @@
     {
       "type": "Feature",
       "properties": { "name": "USA" },
+      "countryInfo": {
+        "year": "1984",
+        "country": "USA",
+        "city": "Los Angeles",
+        "flag": "https://i.postimg.cc/TwGkVGs1/america.webp",
+        "explanationIntro": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper",
+        "explanationLong": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+        "totalAthelets": 6829,
+        "Number_countries": 140,
+        "Accredited_Media": 9190,
+        "totalEvents": 221,
+        "revenue": {
+          "ticket_sales": 377080498,
+          "broadcasting": 693731428.81,
+          "domesticSponsorship": 0,
+          "internationalSponsorship": 297775151.38,
+          "totalRevenue": 1368587078.19
+        },
+        "cost": {
+          "venues": 67125162.99,
+          "organization": 399386259.65,
+          "other": 0,
+          "totalCost": 466511422.64
+        },
+        "sources": {
+          "SRC1": "IOC 2018: https://www.olympic.org/los-angeles-1984 (accessed 07.07.2018)",
+          "SRC2": "IOC 2018: https://www.olympic.org/los-angeles-1984 (accessed 07.07.2018)",
+          "SRC3": "IOC 2018: https://www.olympic.org/los-angeles-1984 (accessed 07.07.2018)",
+          "SRC4": "IOC 2018: https://www.olympic.org/los-angeles-1984 (accessed 07.07.2018)",
+          "SRC5": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 33",
+          "SRC6": "International Olympic Committee IOC. (2020). Olympic Marketing Fact File 2020 Edition. https://library.olympic.org/doc/SYRACUSE/355225, p. 27",
+          "SRC7": "LAOOC Los Angeles Olympic Games Organizing Commitee. (1985). Official Report of the Games of the XXIIIrd Olympiad Los Angeles, 1984: Vol. 1 Organization and Planning, p. 311",
+          "SRC8": "LAOOC Los Angeles Olympic Games Organizing Commitee. (1985). Official Report of the Games of the XXIIIrd Olympiad Los Angeles, 1984: Vol. 1 Organization and Planning, p. 308",
+          "SRC9": "LAOOC Los Angeles Olympic Games Organizing Commitee. (1985). Official Report of the Games of the XXIIIrd Olympiad Los Angeles, 1984: Vol. 1 Organization and Planning, p. 308"
+        }
+      },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [

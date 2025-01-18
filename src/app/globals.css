@@ -70,6 +70,14 @@ body {
   color: white;
 }
 
+.bodyLilBigger {
+  font-family: "Inter", serif;
+  font-weight: 300;
+  font-size: 16px;
+
+  color: white;
+}
+
 .littleSubtitle {
   font-family: "Inter", serif;
   font-weight: 500;

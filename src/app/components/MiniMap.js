@@ -8,8 +8,8 @@ const MiniMap = ({ selectedCountry }) => {
   useEffect(() => {
     const svg = d3.select(svgRef.current);
 
-    const width = svg.node().clientWidth || 400; // Smaller width for detail page
-    const height = width / 2;
+    const width = svg.node().clientWidth || 400;
+    const height = width / 1.5;
 
     svg
       .attr("viewBox", `0 0 ${width} ${height}`)
@@ -68,10 +68,7 @@ const MiniMap = ({ selectedCountry }) => {
 
   return (
     <div style={{ position: "relative" }}>
-      <svg
-        ref={svgRef}
-        style={{ width: "100%", height: "auto", border: "1px solid #ccc" }}
-      ></svg>
+      <svg ref={svgRef} style={{ width: "100%", height: "auto" }}></svg>
     </div>
   );
 };

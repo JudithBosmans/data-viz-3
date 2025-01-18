@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
 import { useRouter } from "next/navigation";
 
-const Map2WithDots = () => {
+const Map2WithDots = ({ onLoadComplete }) => {
   const svgRef = useRef(null);
   const tooltipRef = useRef(null);
   const [tooltipContent, setTooltipContent] = useState("");
@@ -50,12 +50,22 @@ const Map2WithDots = () => {
             .attr("stroke", "none")
             .on("mouseover", (event) => {
               group.selectAll("circle").attr("fill", "orange");
+
+              // Set cursor style to pointer
+              d3.select(event.target).style("cursor", "pointer");
+
+              // Update tooltip content and style
               setTooltipContent(feature.properties.name || "Unknown");
               setTooltipStyle({
                 display: "block",
                 left: `${event.pageX + 10}px`,
                 top: `${event.pageY + 10}px`,
               });
+            })
+            .on("mouseout", () => {
+              group.selectAll("circle").attr("fill", "white");
+              d3.select(event.target).style("cursor", "default");
+              setTooltipStyle({ display: "none" });
             })
             .on("mouseout", () => {
               group.selectAll("circle").attr("fill", "white");
@@ -106,15 +116,16 @@ const Map2WithDots = () => {
             .attr("r", 1.5)
             .attr("fill", "white");
         });
+        if (onLoadComplete) onLoadComplete();
       })
       .catch((error) => console.error("Error loading GeoJSON data:", error));
-  }, []);
+  }, [onLoadComplete]);
 
   return (
     <div style={{ position: "relative" }}>
       <svg
         ref={svgRef}
-        style={{ width: "100%", height: "auto", border: "1px solid #ccc" }}
+        style={{ width: "100vw", height: "auto", marginTop: "10%" }}
       ></svg>
       <div
         ref={tooltipRef}
