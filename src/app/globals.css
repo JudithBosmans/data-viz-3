@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --foreground: #000000;
 }
@@ -9,14 +10,12 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #000000;
-    --foreground: #ededed;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Oxygen", sans-serif;
 }
 
 /* FONTS */
@@ -42,15 +41,39 @@ body {
   letter-spacing: 1px;
 }
 
-.gridPanel {
-  border-radius: 15px;
-  background-color: white;
-}
-
 .scrollbar-hide {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* Chrome, Safari, and Opera */
+}
+
+.centerCont {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  align-items: flex-start;
+  gap: 2rem;
+  width: 90%;
+  padding: 1rem;
+}
+
+/* FONTS */
+
+.bodyFont {
+  font-family: "Inter", serif;
+  font-weight: 300;
+  font-size: 14px;
+
+  color: white;
+}
+
+.littleSubtitle {
+  font-family: "Inter", serif;
+  font-weight: 500;
+  font-size: 24px;
+
+  color: white;
 }

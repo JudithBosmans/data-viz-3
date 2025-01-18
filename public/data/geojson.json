@@ -6825,6 +6825,43 @@
     {
       "type": "Feature",
       "properties": { "name": "Japan" },
+      "countryInfo": {
+        "year": "1964",
+        "country": "Japan",
+        "city": "Tokyo",
+        "flag": "https://i.postimg.cc/kgD44hv8/Flag-of-Japan-svg.png",
+        "explanationIntro": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper",
+        "explanationLong": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+        "totalAthelets": 5558,
+        "Number_countries": 94,
+        "Accredited_Media": 1891,
+        "totalEvents": 163,
+        "revenue": {
+          "ticket_sales": 42964387,
+          "broadcasting": 12953543,
+          "domesticSponsorship": 0,
+          "internationalSponsorship": 8095965,
+          "totalRevenue": 867220840
+        },
+        "cost": {
+          "venues": 369596525,
+          "organization": 220824180,
+          "other": 0,
+          "totalCost": 590420705
+        },
+        "sources": {
+          "SRC1": "Tokyo Metropolitan Government, \"18th Olympic Games Tokyo Metropolitan Report\" [dai 18kai orinpikku kyogitaikai tokyo to hokokusho], 1965, p.25",
+          "SRC2": "[1] Tokyo Metropolitan Government, \"18th Olympic Games Tokyo Metropolitan Report\" [dai 18kai orinpikku kyogitaikai tokyo to hokokusho], 1965, p.303, [2] Organizing Committee. (1964). THE GAMES OF THE XVII OLXMPIAD TOKYO 1964 | The Official Report of the Organizing Committee, p. 44",
+          "SRC3": "Organizing Committee. (1964). THE GAMES OF THE XVII OLXMPIAD TOKYO 1964 | The Official Report of the Organizing Committee, p. 78",
+          "SRC4": "Organizing Committee. (1964). THE GAMES OF THE XVII OLXMPIAD TOKYO 1964 | The Official Report of the Organizing Committee, p. 91, p. 385.",
+          "SRC5": "Organizing Committee (English), 1964, p. 62. (THE GAMES OF THE XVII OLXMPIAD TOKYO 1964 | The Official Report of the Organizing Committee)",
+          "SRC6": "International Olympic Committee IOC. (2017). Olympic Marketing Fact File 2018 Edition. https://stillmed.olympic.org/media/Document%20Library/OlympicOrg/Documents/IOC-Marketing-and-Broadcasting-General-Files/Olympic-Marketing-Fact-File-2018.pdf, p. 27",
+          "SRC7": "[1] International Olympic Committee IOC. (2017). Olympic Marketing Fact File 2018 Edition. https://stillmed.olympic.org/media/Document%20Library/OlympicOrg/Documents/IOC-Marketing-and-Broadcasting-General-Files/Olympic-Marketing-Fact-File-2018.pdf, p. 20 [2], Organizing Committee. (1964). THE GAMES OF THE XVII OLXMPIAD TOKYO 1964 | The Official Report of the Organizing Committee, p. 67",
+          "SRC8": "The Tokyo Metropolitan Government. (1965). Official Report | Tokyo Olympic Games 1964. p. 331",
+          "SRC9": "The Tokyo Metropolitan Government. (1965). Official Report | Tokyo Olympic Games 1964. p. 62",
+          "SRC10": ""
+        }
+      },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [

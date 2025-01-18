@@ -1,122 +1,137 @@
 "use client";
-
-import React, { useState, useEffect } from "react";
-import DottedMap from "dotted-map";
+import React, { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
+import { useRouter } from "next/navigation";
 
-console.log("Hello World from Map2 component!");
-
-const Map2 = () => {
-  const [mapSVG, setMapSVG] = useState("");
+const Map2WithDots = () => {
+  const svgRef = useRef(null);
+  const tooltipRef = useRef(null);
+  const [tooltipContent, setTooltipContent] = useState("");
+  const [tooltipStyle, setTooltipStyle] = useState({});
+  const router = useRouter();
 
   useEffect(() => {
-    console.log("useEffect executed!");
+    const svg = d3.select(svgRef.current);
+    const tooltip = d3.select(tooltipRef.current);
 
-    const generateMap = async () => {
-      try {
-        console.log("Starting map generation...");
+    const width = svg.node().clientWidth || 800;
+    const height = width / 2;
 
-        // Fetch GeoJSON data
-        const response = await fetch("/data/geojson.json");
-        if (!response.ok) {
-          throw new Error(`Failed to fetch GeoJSON: ${response.statusText}`);
-        }
-        const geoData = await response.json();
-        console.log("GeoJSON data loaded:", geoData);
+    svg
+      .attr("viewBox", `0 0 ${width} ${height}`)
+      .attr("preserveAspectRatio", "xMidYMid meet");
 
-        const width = 800; // Fixed width
-        const height = 400; // Adjusted for a 2:1 aspect ratio
+    const projection = d3
+      .geoNaturalEarth1()
+      .scale(width / 6.28)
+      .translate([width / 2, height / 2]);
 
-        // Set up the projection
-        const projection = d3
-          .geoNaturalEarth1()
-          .scale(width / 6.28) // Adjust scale for the map
-          .translate([width / 2, height / 2]); // Center the map
-        console.log("Projection set up.");
+    const pathGenerator = d3.geoPath(projection);
 
-        // Create a new DottedMap instance
-        const map = new DottedMap({
-          height: 60, // Grid size of the dotted map
-          grid: "diagonal", // Diagonal grid for dots
-        });
-        console.log("DottedMap instance created.");
+    // Fetch GeoJSON data
+    d3.json("/data/geojson.json")
+      .then((data) => {
+        svg.selectAll("*").remove();
 
-        // Add dots within each country's shape
-        geoData.features.forEach((feature, featureIndex) => {
-          const pathGenerator = d3.geoPath(projection);
+        // Add countries group
+        const countryGroups = svg.append("g");
+
+        // Add paths for each country
+        data.features.forEach((feature) => {
+          const group = countryGroups
+            .append("g")
+            .attr("data-country", feature.properties.name);
+
+          // Add a path for the country's surface
+          group
+            .append("path")
+            .attr("d", pathGenerator(feature))
+            .attr("fill", "transparent")
+            .attr("stroke", "none")
+            .on("mouseover", (event) => {
+              group.selectAll("circle").attr("fill", "orange");
+              setTooltipContent(feature.properties.name || "Unknown");
+              setTooltipStyle({
+                display: "block",
+                left: `${event.pageX + 10}px`,
+                top: `${event.pageY + 10}px`,
+              });
+            })
+            .on("mouseout", () => {
+              group.selectAll("circle").attr("fill", "white");
+              setTooltipStyle({ display: "none" });
+            })
+            .on("click", () => {
+              const countryName = feature.properties.name.toLowerCase();
+              const countryInfo = feature.countryInfo;
+
+              if (countryInfo) {
+                const serializedData = encodeURIComponent(
+                  JSON.stringify(countryInfo)
+                );
+                router.push(
+                  `/detail/country/${countryName}?data=${serializedData}`
+                );
+              } else {
+                alert(
+                  `${feature.properties.name} has no additional data available.`
+                );
+              }
+            });
+
+          // Add dots for the country
           const bounds = pathGenerator.bounds(feature);
-          console.log(`Bounds for feature ${feature.properties.name}:`, bounds);
-
           const [x0, y0] = bounds[0];
           const [x1, y1] = bounds[1];
 
-          // Dot density
-          const dotSpacing = 5; // Adjust for performance and density
+          const dotSpacing = 5;
+          const dots = [];
 
           for (let x = x0; x < x1; x += dotSpacing) {
             for (let y = y0; y < y1; y += dotSpacing) {
               const point = projection.invert([x, y]);
-              if (point) {
-                const contains = d3.geoContains(feature, point);
-                if (contains) {
-                  console.log(
-                    `Adding pin for country ${feature.properties.name} at point:`,
-                    point
-                  );
-                  map.addPin({
-                    lat: point[1],
-                    lng: point[0],
-                    svgOptions: {
-                      color: d3.interpolateRainbow(
-                        featureIndex / geoData.features.length
-                      ),
-                      radius: 0.5,
-                    },
-                    data: { country: feature.properties.name },
-                  });
-                }
+              if (point && d3.geoContains(feature, point)) {
+                dots.push({ x, y });
               }
             }
           }
+
+          group
+            .selectAll("circle")
+            .data(dots)
+            .enter()
+            .append("circle")
+            .attr("cx", (d) => d.x)
+            .attr("cy", (d) => d.y)
+            .attr("r", 1.5)
+            .attr("fill", "white");
         });
-
-        console.log("All pins added.");
-
-        // Generate SVG from DottedMap
-        const svg = map.getSVG({
-          shape: "circle",
-          backgroundColor: "black",
-          color: "white",
-          radius: 0.5, // Default radius for points
-        });
-        console.log("Generated SVG:", svg);
-
-        setMapSVG(svg);
-      } catch (error) {
-        console.error("Error generating the map:", error);
-      }
-    };
-
-    generateMap();
+      })
+      .catch((error) => console.error("Error loading GeoJSON data:", error));
   }, []);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "500px",
-        backgroundColor: "#000",
-      }}
-    >
-      {mapSVG ? (
-        <div dangerouslySetInnerHTML={{ __html: mapSVG }} />
-      ) : (
-        <p style={{ color: "white" }}>Loading map...</p>
-      )}
+    <div style={{ position: "relative" }}>
+      <svg
+        ref={svgRef}
+        style={{ width: "100%", height: "auto", border: "1px solid #ccc" }}
+      ></svg>
+      <div
+        ref={tooltipRef}
+        style={{
+          position: "absolute",
+          backgroundColor: "rgba(0, 0, 0, 0.7)",
+          color: "#fff",
+          padding: "5px",
+          fontSize: "12px",
+          pointerEvents: "none",
+          ...tooltipStyle,
+        }}
+      >
+        {tooltipContent}
+      </div>
     </div>
   );
 };
 
-export default Map2;
+export default Map2WithDots;
