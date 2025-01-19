@@ -140,9 +140,9 @@ const page = () => {
             <p className="text-white">
               Dataset on major revenues (ticketing, sponsoring, broadcasting)
               and costs (organisation, sports venues) for the Olympic Games
-              (Summer and Winter) and the Men's Football (Soccer) World Cup from
+              (Summer and Winter) and the Mens Football (Soccer) World Cup from
               the 1960s to the late 2010s. Data are in original currency and in
-              USD2018 reported. Sources are reported. (2022-04-29
+              USD2018 reported. Sources are reported. (2022-04-29)
               <br /> <br />
               Müller, M., Gogishvili, D. and Wolfe, S.D. (2022)
             </p>

@@ -11,7 +11,7 @@ const page = () => {
       <div className="text-white max-w-[50%] flex flex-col justify-center  mx-auto mt-[10%]">
         <div className="max-w-screen-md mb-8 lg:mb-16">
           <h2 className=" text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            What's it about?
+            Whats it about?
           </h2>
         </div>
         <p className="bodyLilBigger tracking-wide ">
