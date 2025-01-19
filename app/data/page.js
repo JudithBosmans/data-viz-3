@@ -10,12 +10,12 @@ import "../../styles/data.css";
 const HexbinChart = () => {
   const [data, setData] = useState(null);
 
-  const width = 4000;
-  const height = 1000;
-  const margin = { top: 20, right: 30, bottom: 80, left: 0 };
+  const width = 2800;
+  const height = 800;
+  const margin = { top: 20, right: 0, bottom: 80, left: 0 };
   const lineThickness = 10;
-  const spacing = 20;
-  const columnOffset = 30;
+  const spacing = 15;
+  const columnOffset = 10;
 
   useEffect(() => {
     d3.json("/data/dataOly.json")
@@ -60,35 +60,87 @@ const HexbinChart = () => {
   const revenueColor = d3
     .scaleOrdinal()
     .domain(revenueCategories)
-    .range(d3.schemeBlues[revenueCategories.length]);
+    .range(d3.schemeReds[revenueCategories.length]);
 
   const costColor = d3
     .scaleOrdinal()
     .domain(costCategories)
-    .range(d3.schemeReds[costCategories.length]);
+    .range(d3.schemeBlues[costCategories.length]);
 
   return (
     <div>
       <Nav />
+      <div className="text-white ml-[5%] absolute bottom-[10%]">
+        <p>revenue</p>
+        <div className="flex flex-row mt-5">
+          <div className="w-[3vw] mr-2 bg-red-200"></div>
+          ticket sales
+        </div>
+        <div className="flex flex-row mt-5">
+          <div className="w-[3vw] mr-2 bg-red-300"></div>
+          broadcasting
+        </div>
+        <div className="flex flex-row mt-5">
+          <div className="w-[3vw] mr-2 bg-red-400"></div>
+          domestic sponsorship
+        </div>
+        <div className="flex flex-row mt-5">
+          <div className="w-[3vw] mr-2 bg-red-500"></div>
+          international sponsorship
+        </div>
+        <div className="flex flex-row mt-5">
+          <div className="w-[3vw] mr-2 bg-red-600"></div>
+          total revenue
+        </div>
+        <p className="mt-[15%]">costs</p>
+        <div className="flex flex-row mt-5">
+          <div className="w-[3vw] mr-2 bg-blue-200"></div>
+          venues
+        </div>
+        <div className="flex flex-row mt-5">
+          <div className="w-[3vw] mr-2 bg-blue-300"></div>
+          organization
+        </div>
+        <div className="flex flex-row mt-5">
+          <div className="w-[3vw] mr-2 bg-blue-400"></div>
+          other
+        </div>
+        <div className="flex flex-row mt-5">
+          <div className="w-[3vw] mr-2 bg-blue-500"></div>
+          totalCost
+        </div>
+      </div>
       <div className="flex flex-col items-center">
         <h1 className="text-3xl font-semibold mb-4">Data Visualization</h1>
-        <div className="overflow-x-auto w-full max-w-5xl">
+        <div className="overflow-x-auto w-full max-w-[75vw] absolute right-0">
           <svg width={width} height={height} className="mainCont mx-auto">
-            {/* X-axis */}
+            {/* X-axis labels */}
             <g transform={`translate(0, ${height - margin.bottom})`}>
               {data.map((d) => (
                 <text
-                  key={d.year}
-                  x={xScale(d.year) + xScale.bandwidth() / 2}
-                  y={20}
+                  x={xScale(d.year) + xScale.bandwidth() / 1.8}
+                  key={`year-${d.year}`}
+                  y={35}
                   textAnchor="end"
-                  transform={`rotate(-45, ${
-                    xScale(d.year) + xScale.bandwidth() / 2
-                  }, 15)`}
+                  fill="white"
                   className="text-xs font-medium text-white rounded-full"
                 >
                   {d.year}
                 </text>
+              ))}
+            </g>
+            {/* Flags */}
+            <g transform={`translate(0, ${height - margin.bottom})`}>
+              {data.map((d, index) => (
+                <image
+                  key={`flag-${index}-${d.year}`}
+                  x={xScale(d.year) + xScale.bandwidth() / 2 - 18}
+                  y={40}
+                  href={d.flag}
+                  width="30"
+                  height="20"
+                  className="flag-image"
+                />
               ))}
             </g>
 
@@ -96,12 +148,12 @@ const HexbinChart = () => {
             {data.map((d, dataIndex) => {
               const xPos = xScale(d.year) + xScale.bandwidth() / 2;
 
-              let currentRevenueY = yScale(0); // Start stacking revenue from the bottom
-              let currentCostY = yScale(0); // Start stacking cost from the bottom
+              let currentRevenueY = yScale(0);
+              let currentCostY = yScale(0);
 
-              const revenueLines = revenueCategories.map((key, i) => {
+              const revenueLines = revenueCategories.map((key) => {
                 const value = d.revenue[key];
-                if (!value) return null; // Skip if value is undefined or zero
+                if (!value) return null;
 
                 const lineHeight = yScale(0) - yScale(value);
                 const yEnd = currentRevenueY - lineHeight;
@@ -130,9 +182,9 @@ const HexbinChart = () => {
                 );
               });
 
-              const costLines = costCategories.map((key, i) => {
+              const costLines = costCategories.map((key) => {
                 const value = d.cost[key];
-                if (!value) return null; // Skip if value is undefined or zero
+                if (!value) return null;
 
                 const lineHeight = yScale(0) - yScale(value);
                 const yEnd = currentCostY - lineHeight;
@@ -147,7 +199,6 @@ const HexbinChart = () => {
                       query: { data: JSON.stringify(d) },
                     }}
                   >
-                    {" "}
                     <motion.line
                       x1={xPos - columnOffset}
                       y1={yStart}
@@ -166,7 +217,7 @@ const HexbinChart = () => {
               });
 
               return (
-                <g key={`${d.year}-${dataIndex}`}>
+                <g key={`bars-${d.year}-${dataIndex}`}>
                   {revenueLines}
                   {costLines}
                 </g>

@@ -11,7 +11,7 @@ const page = () => {
       <div className="text-white max-w-[50%] flex flex-col justify-center  mx-auto mt-[10%]">
         <div className="max-w-screen-md mb-8 lg:mb-16">
           <h2 className=" text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            What`s it about?
+            What's it about?
           </h2>
         </div>
         <p className="bodyLilBigger tracking-wide ">
@@ -29,7 +29,14 @@ const page = () => {
           double of what they earn.
         </p>
         <p className="bodyLilBigger mt-[5%] italic">
-          This website was created by @Judith.Bosmans
+          This website was created by &nbsp;
+          <a
+            href="https://www.linkedin.com/in/judith-bosmans-527428145/"
+            target="_blank"
+            className="hover:text-orange-500 hover:font-medium"
+          >
+            @Judith.Bosmans
+          </a>
         </p>
       </div>
       <div className="max-w-[50%] px-4 py-5 mx-auto text-center lg:py-16 lg:px-6 ">
@@ -60,7 +67,7 @@ const page = () => {
                 suffix="b+"
               />
             </dt>
-            <dd className="font-light text-white">money earned</dd>
+            <dd className="font-light text-white">total money earned</dd>
           </div>
           <div className="flex flex-col items-center justify-center">
             <dt className="mb-2 text-3xl md:text-4xl font-extrabold">
@@ -74,7 +81,7 @@ const page = () => {
                 suffix="b+"
               />
             </dt>
-            <dd className="font-light text-white">money spent</dd>
+            <dd className="font-light text-white">total money spent</dd>
           </div>
         </dl>
       </div>

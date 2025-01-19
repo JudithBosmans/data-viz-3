@@ -7,20 +7,18 @@ import MiniMap from "../../../MiniMap/page";
 import Nav from "../../../Nav/page";
 
 const CountryDetail = ({ params }) => {
-  const [country, setCountry] = useState(null); // State to store the unwrapped country param
+  const [country, setCountry] = useState(null);
   const searchParams = useSearchParams();
   const rawData = searchParams.get("data");
   let countryInfo;
 
   try {
-    // Decode and parse the country data
     countryInfo = rawData ? JSON.parse(decodeURIComponent(rawData)) : null;
   } catch (error) {
     console.error("Error decoding country data:", error);
     countryInfo = null;
   }
 
-  // Unwrap `params` using useEffect
   useEffect(() => {
     async function fetchParams() {
       const resolvedParams = await params;
@@ -33,33 +31,36 @@ const CountryDetail = ({ params }) => {
     <div>
       <Nav />
       <div className="w-[80%] bodyFont centerCont">
-        <header className="mt-[5%]">
-          <Link href="/">
-            <svg
-              className="w-6 h-6 text-white"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M5 12h14M5 12l4-4m-4 4 4 4"
-              />
-            </svg>
-          </Link>
-        </header>
-        <div className="mt-[20%] flex flex-row justify-between">
+        <Link href="/">
+          <svg
+            className="w-6 h-6 absolute top-[17%]"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M5 12h14M5 12l4-4m-4 4 4 4"
+            />
+          </svg>
+        </Link>
+
+        <div className="mt-[10%] flex flex-row justify-between">
           <div className="w-[60%]">
             {country && <MiniMap selectedCountry={country} />}
           </div>
           <div className="w-[40%] ">
-            {country ? <h1></h1> : <h1>Loading country details...</h1>}
+            {country ? (
+              <h1></h1>
+            ) : (
+              <h1 className="ml-[5%]">Loading country details...</h1>
+            )}
             {countryInfo ? (
               <div className="bodyFont ml-[5%]">
                 <h2 className="bodyLilBigger italic">{countryInfo.year}</h2>

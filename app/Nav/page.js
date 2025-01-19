@@ -3,11 +3,12 @@ import Link from "next/link";
 
 const Nav = () => {
   return (
-    <nav>
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 z-1000000">
+    <nav className="bg-black w-full">
+      <div className="w-[95%] flex items-center justify-between mx-auto p-[2%]">
+        {/* Home Icon */}
         <Link href="/">
           <svg
-            className="w-6 h-6 text-white hover:text-orange-600"
+            className="w-6 h-6 text-white hover:text-orange-600 pl-2"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -22,10 +23,42 @@ const Nav = () => {
             />
           </svg>
         </Link>
+
+        {/* Navigation Links */}
+        <div className="hidden md:block">
+          <ul className="flex space-x-[70px] pr-4 bodyFont">
+            <li>
+              <a
+                href="/data"
+                className="text-white hover:text-orange-500 transition-colors duration-200"
+              >
+                Years
+              </a>
+            </li>
+            <li>
+              <a
+                href="/about"
+                className="text-white hover:text-orange-500 transition-colors duration-200"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="/sources"
+                className="text-white hover:text-orange-500 transition-colors duration-200"
+              >
+                Sources
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Mobile Menu Button */}
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white -lg md:hidden focus:outline-none"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white md:hidden focus:outline-none"
           aria-controls="navbar-default"
           aria-expanded="false"
         >
@@ -44,34 +77,6 @@ const Nav = () => {
             />
           </svg>
         </button>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="flex flex-col p-4 md:p-0 mt-4 border  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
-            <li className="">
-              <a
-                href="/data"
-                className="block py-2 px-3 bodyFont text-white hover:text-orange-500 hover:font-regular "
-              >
-                Years
-              </a>
-            </li>
-            <li>
-              <a
-                href="/about"
-                className="block py-2 px-3 bodyFont text-white hover:text-orange-500 hover:font-regular "
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="/sources"
-                className="block py-2 px-3 bodyFont text-white hover:text-orange-500 hover:font-regular "
-              >
-                Sources
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
   );

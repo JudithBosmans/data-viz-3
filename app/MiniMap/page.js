@@ -7,9 +7,8 @@ const MiniMap = ({ selectedCountry }) => {
 
   useEffect(() => {
     const svg = d3.select(svgRef.current);
-
-    const width = svg.node().clientWidth || 400;
-    const height = width / 1.5;
+    const width = 800; // Fixed SVG width
+    const height = 600; // Fixed SVG height
 
     svg
       .attr("viewBox", `0 0 ${width} ${height}`)
@@ -17,58 +16,70 @@ const MiniMap = ({ selectedCountry }) => {
 
     const projection = d3
       .geoNaturalEarth1()
-      .scale(width / 6.28)
-      .translate([width / 2, height / 2]);
-
+      .translate([width / 2, height / 2])
+      .scale(150);
     const pathGenerator = d3.geoPath(projection);
 
-    // Fetch GeoJSON data
     d3.json("/data/geojson.json")
       .then((data) => {
-        svg.selectAll("*").remove(); // Clear previous map if any
+        svg.selectAll("*").remove(); // Clear previous render
 
-        // Draw countries with dots
+        const allDots = [];
+        const dotSpacing = 5;
+
+        // Generate dots for all countries
         data.features.forEach((feature) => {
           const bounds = pathGenerator.bounds(feature);
           const [x0, y0] = bounds[0];
           const [x1, y1] = bounds[1];
 
-          const dotSpacing = 5;
-          const dots = [];
-
           for (let x = x0; x < x1; x += dotSpacing) {
             for (let y = y0; y < y1; y += dotSpacing) {
-              const point = projection.invert([x, y]);
-              if (point && d3.geoContains(feature, point)) {
-                dots.push({
-                  x,
-                  y,
-                  isSelected:
-                    feature.properties.name.toLowerCase() ===
-                    selectedCountry.toLowerCase(),
-                });
+              const geoPoint = projection.invert([x, y]);
+              if (geoPoint && d3.geoContains(feature, geoPoint)) {
+                const projected = projection(geoPoint);
+                if (projected) {
+                  allDots.push({
+                    x: projected[0],
+                    y: projected[1],
+                    isSelected:
+                      feature.properties.name.toLowerCase() ===
+                      selectedCountry.toLowerCase(),
+                  });
+                }
               }
             }
           }
-
-          svg
-            .append("g")
-            .selectAll("circle")
-            .data(dots)
-            .enter()
-            .append("circle")
-            .attr("cx", (d) => d.x)
-            .attr("cy", (d) => d.y)
-            .attr("r", 1.5)
-            .attr("fill", (d) => (d.isSelected ? "orange" : "white")); // White for selected country, grey for others
         });
+
+        // Render all dots
+        svg
+          .append("g")
+          .selectAll("circle")
+          .data(allDots)
+          .enter()
+          .append("circle")
+          .attr("cx", (d) => d.x)
+          .attr("cy", (d) => d.y)
+          .attr("r", 2)
+          .attr("fill", (d) => (d.isSelected ? "orange" : "white"));
+
+        console.log(`Selected country: ${selectedCountry}`);
       })
       .catch((error) => console.error("Error loading GeoJSON data:", error));
-  }, [selectedCountry]); // Re-run effect if the selected country changes
+  }, [selectedCountry]);
 
   return (
     <div style={{ position: "relative" }}>
-      <svg ref={svgRef} style={{ width: "100%", height: "auto" }}></svg>
+      <svg
+        ref={svgRef}
+        style={{
+          width: "100%",
+          height: "auto",
+          marginTop: "-10%",
+          marginLeft: "-10%",
+        }}
+      ></svg>
     </div>
   );
 };

@@ -50,7 +50,7 @@ const page = () => {
               href="https://github.com/johan/world.geo.json/blob/master/README.md"
               target="_blank"
               type="button"
-              class="max-w-[45%] mt-8 flex flex-row bodyFont  py-2 px-5 me-2 mb-2 text-sm font-medium focus:outline-none rounded-full border text-white border-white hover:border-orange-600 hover:text-orange-600"
+              className="max-w-[45%] mt-8 flex flex-row bodyFont pt-1.5 pb-1 px-5 me-2 mb-2 text-sm font-medium focus:outline-none rounded-full border text-white border-white hover:border-orange-600 hover:text-orange-600"
             >
               Check it out
               <svg
@@ -103,7 +103,7 @@ const page = () => {
               href="https://observablehq.com/@d3/world-choropleth/2"
               target="_blank"
               type="button"
-              class="max-w-[45%] mt-8 flex flex-row bodyFont  py-2 px-5 me-2 mb-2 text-sm font-medium focus:outline-none rounded-full border text-white border-white hover:border-orange-600 hover:text-orange-600"
+              className="max-w-[45%] mt-8 flex flex-row bodyFont pt-1.5 pb-1 px-5 me-2 mb-2 text-sm font-medium focus:outline-none rounded-full border text-white border-white hover:border-orange-600 hover:text-orange-600"
             >
               Check it out
               <svg
@@ -136,18 +136,21 @@ const page = () => {
                 <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path>
               </svg>
             </div>
-            <h3 className="mb-2 text-xl font-bold text-white">Framer motion</h3>
+            <h3 className="mb-2 text-xl font-bold text-white">Dataset</h3>
             <p className="text-white">
-              Motion for React is an open source, production-ready library
-              that’s designed for all creative developers. It`s the only
-              animation library with a hybrid engine, combining the power of
-              JavaScript animations with the performance of native browser APIs.
+              Dataset on major revenues (ticketing, sponsoring, broadcasting)
+              and costs (organisation, sports venues) for the Olympic Games
+              (Summer and Winter) and the Men's Football (Soccer) World Cup from
+              the 1960s to the late 2010s. Data are in original currency and in
+              USD2018 reported. Sources are reported. (2022-04-29
+              <br /> <br />
+              Müller, M., Gogishvili, D. and Wolfe, S.D. (2022)
             </p>
             <a
-              href="https://www.npmjs.com/package/framer-motion"
+              href="https://doi.org/10.7910/dvn/cpqehn"
               target="_blank"
               type="button"
-              class="max-w-[45%] mt-8 flex flex-row bodyFont py-2 px-5 me-2 mb-2 text-sm font-medium focus:outline-none rounded-full border text-white border-white hover:border-orange-600 hover:text-orange-600"
+              className="max-w-[45%] mt-8 flex flex-row bodyFont pt-1.5 pb-1 px-5 me-2 mb-2 text-sm font-medium focus:outline-none rounded-full border text-white border-white hover:border-orange-600 hover:text-orange-600"
             >
               Check it out
               <svg
