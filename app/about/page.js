@@ -2,7 +2,7 @@
 import React from "react";
 import CountUp from "react-countup";
 
-import Nav from "../components/Nav";
+import Nav from "../Nav/page";
 
 const page = () => {
   return (

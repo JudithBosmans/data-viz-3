@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
-import MiniMap from "../../../components/MiniMap";
-import Nav from "../../../components/Nav";
+import MiniMap from "../../../MiniMap/page";
+import Nav from "../../../Nav/page";
 
 const CountryDetail = ({ params }) => {
   const [country, setCountry] = useState(null); // State to store the unwrapped country param
@@ -160,7 +160,7 @@ const CountryDetail = ({ params }) => {
           </div>
         </div>
       </div>
-    </div>  
+    </div>
   );
 };
 

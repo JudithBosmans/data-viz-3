@@ -2,11 +2,10 @@
 
 import { useState, useEffect } from "react";
 
-import HomeElements from "./components/HomeElements";
-import Map2 from "./components/Map2";
+import Map2 from "./Map2/page";
 
-import Nav from "../app/components/Nav";
-import LoadingScreen from "../app/components/Loading";
+import Nav from "./Nav/page";
+import LoadingScreen from "./Loading/page";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);

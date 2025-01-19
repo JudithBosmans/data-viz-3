@@ -4,7 +4,7 @@ import * as d3 from "d3";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-import Nav from "../components/Nav";
+import Nav from "../Nav/page";
 import "../../styles/data.css";
 
 const HexbinChart = () => {
