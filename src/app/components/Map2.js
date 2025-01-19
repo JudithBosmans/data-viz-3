@@ -84,7 +84,7 @@ const Map2WithDots = ({ onLoadComplete }) => {
                 );
               } else {
                 alert(
-                  `${feature.properties.name} has no additional data available.`
+                  `${feature.properties.name} has not hosted the Olympic Games yet.`
                 );
               }
             });

@@ -3,9 +3,7 @@
 import { useState, useEffect } from "react";
 
 import HomeElements from "./components/HomeElements";
-import Map from "./components/Map";
 import Map2 from "./components/Map2";
-import Map3 from "./components/Map3";
 
 import Nav from "../app/components/Nav";
 import LoadingScreen from "../app/components/Loading";
@@ -26,13 +24,10 @@ export default function Home() {
   }, []);
   return (
     <div>
-      {/* <Map3 /> */}
-      {isLoading && <LoadingScreen />} 
+      {isLoading && <LoadingScreen />}
       <Nav onLoadComplete={handleMapLoadComplete} />
       <Map2 onLoadComplete={handleMapLoadComplete} />
-      {/* <Map /> */}
-      {/* <Data />
-      <HomeElements /> */}
+      {/* <HomeElements /> */}
     </div>
   );
 }
